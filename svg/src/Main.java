@@ -24,6 +24,37 @@ public class Main
         segment.b.x = 4.0;
         segment.b.y = 3.0;
         System.out.println(segment.length());
+        Segment[] segments = new Segment[2];
+        segments[0] = segment;
+
+        segments[1] = new Segment();
+        segments[1].a = new Point();
+        segments[1].b = new Point();
+        segments[1].a.x = 0.0;
+        segments[1].a.y = 0.0;
+        segments[1].b.x = 7.5;
+        segments[1].b.y = 5.0;
+
+        Segment result = Segment.maxSegment(segments);
+        System.out.println(result.length());
+
 
     }
+
+    public static Segment max_Segment(Segment[] arr)
+    {
+
+        if (arr.length == 0)
+            return null;
+        Segment max = arr[0];
+        for( int i=0; i<arr.length; i++)
+        {
+           if (arr[i].length() > max.length())
+           {
+               max = arr[i];
+           }
+        }
+        return max;
+    }
+
 }
