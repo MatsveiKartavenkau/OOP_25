@@ -11,6 +11,13 @@ public class Main
         System.out.println(p1);
         System.out.println(p1.toSvg());
 
+        Point p2 = new Point();
+        p2.x = 10.0;
+        p2.y = 15.0;
+        System.out.println(p2);
+        System.out.println(p2.toSvgLine());
+
+
         p1.translate(-6, 5 );
         System.out.println(p1);
         Point tr = p1.translated(6, -5);
